@@ -1,0 +1,170 @@
+/* ===== PERFIL ===== */
+
+.profile-page {
+  padding: 2rem 0 0;
+}
+
+.profile-section {
+  padding: 1rem 0 3rem;
+}
+
+.profile-intro {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.profile-intro h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+
+.profile-intro p {
+  max-width: 760px;
+  color: rgba(46, 46, 46, 0.85);
+}
+
+/* HEADER ESPECÍFICO */
+
+.menu-toggle {
+  border: none;
+  background: transparent;
+  font-size: 1.8rem;
+  color: var(--navy);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.menu-toggle:hover {
+  color: var(--pink);
+}
+
+.profile-avatar {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--pink);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  transition: var(--transition);
+}
+
+.profile-avatar:hover {
+  background-color: var(--mint);
+  transform: scale(1.05);
+}
+
+/* GRID */
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.profile-card {
+  min-height: 240px;
+  background: linear-gradient(
+    135deg,
+    rgba(46, 196, 182, 0.12),
+    rgba(255, 143, 163, 0.12)
+  );
+  border: 1px solid rgba(27, 73, 101, 0.08);
+  border-radius: 26px;
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.05),
+    rgba(27,73,101,0.05)
+  );
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.profile-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 34px rgba(27, 73, 101, 0.16);
+}
+
+.profile-card:hover::before {
+  opacity: 1;
+}
+
+.profile-card-content {
+  position: relative;
+  z-index: 2;
+}
+
+.profile-card-content h3 {
+  font-size: 1.5rem;
+  color: var(--navy);
+  margin-bottom: 0.7rem;
+}
+
+.profile-card-content p {
+  color: rgba(46, 46, 46, 0.88);
+  line-height: 1.6;
+}
+
+/* TARJETA ESPECIAL LOGOUT */
+
+.profile-card-logout {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 143, 163, 0.20),
+    rgba(27, 73, 101, 0.08)
+  );
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+  .profile-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-card {
+    min-height: 210px;
+    padding: 1.2rem;
+    border-radius: 22px;
+  }
+
+  .profile-card-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-intro {
+    text-align: center;
+  }
+}
+
+.reservation-reviewed {
+  font-weight: 700;
+  color: var(--teal);
+  background: rgba(46,196,182,0.15);
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+}

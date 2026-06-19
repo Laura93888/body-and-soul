@@ -1,0 +1,89 @@
+
+
+.admin-alert{
+  padding: 1rem 1.2rem;
+  border-radius: 18px;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+
+.admin-alert-ok{
+  background-color: rgba(46, 196, 182, 0.14);
+  color: #169486;
+}
+
+.admin-alert-error{
+  background-color: rgba(255, 143, 163, 0.16);
+  color: #d35d75;
+}
+
+.report-table{
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.report-table-row{
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  background-color: rgba(46, 196, 182, 0.06);
+  border: 1px solid rgba(46, 196, 182, 0.12);
+  border-radius: 16px;
+}
+
+.report-table-head{
+  background-color: #1B4965;
+  color: #F7FDFC;
+  font-weight: 800;
+  border: none;
+}
+
+.report-table-head span{
+  color: #F7FDFC !important;
+}
+
+.report-table-row span{
+  color: rgba(46, 46, 46, 0.82);
+  font-weight: 600;
+}
+
+.report-table-row strong{
+  color: var(--admin-primary);
+  justify-self: start;
+}
+
+.admin-content > .admin-form-card{
+  width: 100%;
+  max-width: none;
+}
+
+.categoria-row,
+.report-table-head{
+  grid-template-columns: 1.3fr 1fr 1fr 120px;
+}
+
+.categoria-row .btn-reject{
+  justify-self: end;
+  padding: 0.55rem 0.9rem;
+}
+
+.report-table .report-table-row{
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 140px;
+  align-items: center;
+}
+
+.report-table .report-table-row span,
+.report-table .report-table-row strong{
+  align-self: center;
+}
+
+.report-table .report-table-row .btn-reject{
+  justify-self: end;
+  width: auto;
+  padding: 0.55rem 1rem;
+  margin: 0;
+}
