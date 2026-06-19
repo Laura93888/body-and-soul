@@ -127,23 +127,23 @@ Proyecto desarrollado en grupo como Trabajo Fin de Grado del ciclo de Desarrollo
 
 ### Página principal con Mapa y búsqueda de actividades
 
-![Busqueda y mapa](capturas/home1.png)
+![Busqueda y mapa](Capturas/home1.png)
 
 
-![Mas reservadas](capturas/home2.png)
+![Mas reservadas](Capturas/home2.png)
 
 ### Categorías y actividades
 
-![Categorías](capturas/categorias.png)
+![Categorías](Capturas/categorias.png)
 
 ### Detalle de actividad
 
-![Detalle actividad](capturas/actividaddetalle.png)
+![Detalle actividad](Capturas/actividaddetalle.png)
 
 ### Panel de empresa
 
-![Panel empresa](capturas/panelempresa.png)
+![Panel empresa](Capturas/panelempresa.png)
 
 ### Panel de administración
 
-![Panel administrador](capturas/paneladmin.png)
+![Panel administrador](Capturas/paneladmin.png)
