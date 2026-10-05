@@ -51,6 +51,44 @@ foreach($datos as $empresa){
             $coincide = false;
         }
 
+        if($precio != ""){
+            $precioServicio = (float)($servicio["precio"] ?? 0);
+
+            if($precio == "0-10" && ($precioServicio < 0 || $precioServicio > 10)){
+                $coincide = false;
+            }
+            if($precio == "10-25" && ($precioServicio < 10 || $precioServicio > 25)){
+                $coincide = false;
+            }
+            if($precio == "25-50" && ($precioServicio < 25 || $precioServicio > 50)){
+                $coincide = false;
+            }
+            if($precio == "50+" && $precioServicio <= 50){
+                $coincide = false;
+            }
+        }
+
+        if($fecha != ""){
+            $coincideFecha = false;
+            $hoy = date("Y-m-d");
+            $finSemana = date("Y-m-d", strtotime("+7 days"));
+
+            foreach(($servicio["detalles"] ?? []) as $detalle){
+                if($fecha == "semana" && ($detalle["fecha"] ?? "") >= $hoy && ($detalle["fecha"] ?? "") <= $finSemana){
+                    $coincideFecha = true;
+                    break;
+                }
+                if($fecha != "semana" && ($detalle["fecha"] ?? "") == $fecha){
+                    $coincideFecha = true;
+                    break;
+                }
+            }
+
+            if(!$coincideFecha){
+                $coincide = false;
+            }
+        }
+
         if($ubicacion != ""){
 
             $textoUbicacion = limpiarTexto(
